@@ -1,0 +1,37 @@
+https://pandas.pydata.org/
+https://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html
+
+Virtual-env & Jupyter
+-------------------------------------
+python3.9 -m venv .env-3.9
+source .env-3.9/bin/activate
+pip install pip -U
+pip freeze
+
+# Do not remove pkg_resources==0.0.0, it may have some use
+# pip freeze | xargs pip uninstall -y
+
+pip install jupyterlab
+mkdir requirements
+pip freeze > requirements/jupyterlab.txt
+
+# Start jupyter-lab
+jupyter-lab
+
+pandas
+--------------------------------------
+pip install pandas
+pip install matplotlib
+pip install openpyxl - read write excel
+pip install python-dotenv
+
+# DB connection - pyodbc
+On Ubuntu - need to manually install "unixodbc-dev" and "python3.9-dev" (The version of python used)
+
+apt-get update
+apt-get install unixodbc-dev
+apt-get install python3.9-dev
+pip install pyodbc
+
+SQL Server Driver - Need to install maually - "ODBC Driver 17 for SQL Server"
+https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017

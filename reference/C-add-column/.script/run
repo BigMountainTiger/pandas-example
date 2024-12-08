@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -f example_files/*
+cp example_files_archive/example.txt example_files/example_20220131.txt
+
+python add_colume.py

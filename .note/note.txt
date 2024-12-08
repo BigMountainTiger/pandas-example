@@ -1,0 +1,4 @@
+loc vs iloc:
+    Loc => select rows and columns by labels => inclusive on both ends
+    iloc => select rows and columns by 0 based integer position => inclusive the begining, exclusive the end (like range()).
+

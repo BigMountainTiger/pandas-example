@@ -1,0 +1,15 @@
+When a new record as defined by its unique primary key coming, a new row is added:
+    current_ind => true
+    deleted_ind => false
+    created_ts => NOW()
+    deleted_ts => null/empty
+    updated_ts => null/empty
+
+for the entire life of this record, the only possible transitions on this record row are
+    current_ind => from true to false
+    deleted_ind => from false to true
+
+We need to clearly define "update_ts". One definiton is the time when we change the value of either "current_ind " or "deleted_ind"
+ 
+For a record that was deleted and added back again, because we need to update both "current_ind " and "deleted_ind",
+the "updated_ts" alone is unable to tell us when this record was deleted.

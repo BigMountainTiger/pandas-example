@@ -5,6 +5,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/.env-3.9": true
+    "**/.env-*": true,
+    "**/.ipynb_checkpoints": true
   }
 }

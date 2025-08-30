@@ -1,0 +1,1 @@
+merge is the more generic way to join two dataframes in pandas

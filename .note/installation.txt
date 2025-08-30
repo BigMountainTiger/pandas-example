@@ -11,7 +11,10 @@ pip freeze
 # Do not remove pkg_resources==0.0.0, it may have some use
 # pip freeze | xargs pip uninstall -y
 
-pip install jupyterlab
+pip install -U jupyterlab
+pip install jupyter_contrib_nbextensions
+pip install jupyterlab-code-formatter
+
 mkdir requirements
 pip freeze > requirements/jupyterlab.txt
 
